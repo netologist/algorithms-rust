@@ -1,0 +1,48 @@
+[workspace]
+resolver = "2"
+members = [
+  "common",
+  "patterns/fault-tolerance/circuit-breaker",
+  "patterns/fault-tolerance/retry-backoff",
+  "patterns/fault-tolerance/bulkhead",
+  "patterns/fault-tolerance/timeout",
+  "patterns/fault-tolerance/fallback",
+  "patterns/consensus/raft",
+  "patterns/consensus/paxos",
+  "patterns/consensus/leader-election",
+  "patterns/consensus/two-phase-commit",
+  "patterns/consensus/three-phase-commit",
+  "patterns/replication/primary-replica",
+  "patterns/replication/multi-leader",
+  "patterns/replication/wal",
+  "patterns/replication/crdt",
+  "patterns/replication/quorum",
+  "patterns/replication/read-repair",
+  "patterns/messaging/pub-sub",
+  "patterns/messaging/event-sourcing",
+  "patterns/messaging/cqrs",
+  "patterns/messaging/saga-choreography",
+  "patterns/messaging/saga-orchestration",
+  "patterns/messaging/outbox",
+  "patterns/partitioning/consistent-hashing",
+  "patterns/partitioning/range-partitioning",
+  "patterns/partitioning/rendezvous-hashing",
+  "patterns/discovery/service-registry",
+  "patterns/discovery/load-balancer",
+  "patterns/discovery/sidecar",
+  "patterns/gossip/gossip-protocol",
+  "patterns/gossip/epidemic-broadcast",
+  "patterns/gossip/chord-dht",
+  "patterns/observability/heartbeat",
+  "patterns/observability/health-check",
+  "patterns/observability/distributed-tracing",
+]
+
+[workspace.dependencies]
+crossbeam-channel = "0.5"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rand = "0.8"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+tokio = { version = "1", features = ["full"] }
