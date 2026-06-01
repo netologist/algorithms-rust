@@ -36,6 +36,12 @@ members = [
   "patterns/observability/heartbeat",
   "patterns/observability/health-check",
   "patterns/observability/distributed-tracing",
+  # probabilistic
+  "patterns/probabilistic/bloom-filter",
+  # id-generation
+  "patterns/id-generation/snowflake",
+  # replication (new)
+  "patterns/replication/merkle-tree",
 ]
 
 [workspace.dependencies]
@@ -46,3 +52,6 @@ rand = "0.8"
 tracing = "0.1"
 tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 tokio = { version = "1", features = ["full"] }
+sha2 = "0.10"
+hex = "0.4"
+chrono = { version = "0.4", features = ["clock"] }
